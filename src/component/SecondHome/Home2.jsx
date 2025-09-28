@@ -18,7 +18,7 @@ function Home2() {
                 <div className='navbar'>
                     <div className='navimgbox'>
                         <img src={icon} alt="" />
-                        <span>ali0324king@gmail.com</span>
+                        <span>Hananali0324king@gmail.com</span>
                     </div>
                     <div className={`rightnav ${open ? "on" : ""}`}>
                         <span> <Link to='service' smooth={true} duration={300}>Services</Link></span>
