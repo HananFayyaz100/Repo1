@@ -1,0 +1,118 @@
+.services-section {
+  background: black;
+  color: #fff;
+  padding: 40px 24px;
+  max-width: 800px;
+  margin: 50px auto;
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(31, 0, 41, 0.4);
+}
+
+.services-title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #b197fc;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, rgb(124, 1, 255), white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #bdbdbd;
+  margin-bottom: 32px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Base service item style */
+.service-item {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-radius: 8px;
+  padding: 18px 22px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  border-bottom: 1px solid #282634;
+  cursor: pointer;
+}
+
+/* Remove persistent highlight background from Graphic Design */
+.service-item.highlight {
+  /* No background color by default */
+  color: #b197fc; /* optional color highlight on text */
+}
+
+/* Hover background for all service items including Graphic Design */
+.service-item:hover {
+  background-color: rgb(131, 77, 293);
+  color: #211b3d;
+}
+
+/* Reset text color of number and title inside hovered .service-item */
+.service-item:hover .service-number,
+.service-item:hover .service-title,
+.service-item:hover .service-description {
+  color: inherit;
+}
+
+/* Arrows base style */
+.service-arrow {
+  margin-left: auto;
+  font-size: 2.1rem;
+  color: #a08bfa;
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  will-change: transform;
+}
+
+/* On service item hover, arrow color changes and moves upward a bit */
+.service-item:hover .service-arrow {
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Extra arrow scale on hover for better effect */
+.service-item:hover .service-arrow {
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+/* Optional: keep different arrow for highlighted item */
+.service-item.highlight .service-arrow {
+  color: #b197fc;
+}
+
+/* Reset text color for description */
+.service-description {
+  font-size: 1rem;
+  color: #bdbdbd;
+  display: block;
+}
+
+/* Service number style */
+.service-number {
+  font-weight: bold;
+  margin-right: 18px;
+  font-size: 1.1rem;
+  color: #a08bfa;
+  min-width: 30px;
+}
+
+/* Title style */
+.service-title {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin-right: 12px;
+  display: block;
+  margin-bottom: 6px;
+  color: inherit;
+}

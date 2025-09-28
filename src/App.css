@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.first{
+    background: rgb(15, 7, 21);
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}

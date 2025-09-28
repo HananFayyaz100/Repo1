@@ -1,0 +1,110 @@
+.outer_skill{
+  
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: rgb(15, 7, 21);
+
+}
+.inner_skill{
+    width: 100%;
+    margin: auto 0px;
+    background: rgb(15, 7, 21);
+}
+.first_part{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 30px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #9747FF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+.second_part{
+    width: 60%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+.third_part{
+  
+    display: flex;
+    gap: 2px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+}
+.each_skill{
+    width: 150px;
+    margin-left: 10px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;    
+
+}
+.first_part_of_each_skill{
+    width: 100%;
+    height: 80%;
+    gap: 5px;
+    
+    border-radius: 20px;
+    background: rgb(40, 14, 61);
+    opacity: 0.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+.inner-img{
+    margin-top: 10px;
+    width: 70%;
+    height: 60%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.inner-img img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+.first_part_of_each_skill:hover{
+    opacity: 0.8;
+    border: 2px solid rgb(124, 14, 209);
+    background: rgb(131, 77, 239);
+}
+.first_part_of_each_skill:hover .inner-img{
+    width: 80%;
+    height: 70%;
+}
+.percentage{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+.second_part_of_each_skill{
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(131, 77, 239);
+}
+@media(max-width: 720px){
+    .first_part{
+        font-size: 1.5rem;
+    }
+    .second_part_of_each_skill{
+        font-size: 1rem;
+    }
+    .percentage{
+        font-size: 1rem;
+    }
+}
