@@ -1,242 +1,299 @@
-import React, { useState } from 'react';
-import './Portfolio.css';
-import first from "./project1.jpg";
-import sec from "./project2.jpg";
-import third from "./project3.jpg";
-import four from "./project4.jpg";
-import five from "./project5.jpg";
-import six from "./project6.jpg";
-import seven from "./pro7.jpg";
-import eight from "./pro8.jpg";
-import nine from "./pro9.jpg";
-import ten from "./pro10.jpg";
-import eleven from "./pro11.jpg";
-import twelve from "./pro12.jpg";
-import thirteen from "./pro13.jpg";
-import forteen from "./pro14.jpg";
-import fifteen from "./pro15.jpg";
-import sixteen from "./pro16.jpg";
-import seventeen from "./pro17.jpg";
-import sevensec from './seven.jpg';
-import thirdsec from './third.jpg';
-const projectsData = [
-  {
-    id: 18,
-    category: 'UI/UX',
-    title: 'Branding Project',
-    description: "Explore the projects I've worked on below,demonstrating my skills,WWW.jfsl@gmail.com",
-    imageUrl: four,
-    email: 'branding@example.com',
-  },
-  {
-    id: 4,
-    category: 'UI/UX',
-    title: 'Branding Project',
-    description: "Branding and marketing assets.",
-    imageUrl: six,
-    email: 'branding@example.com',
-    
-  },
-  {
-    id: 1,
-    category: 'UI/UX',
-    title: 'hanan Vista Properties',
-    description: "Explore the projects I've worked on below,demonstrating my skills,WWW.jfsl@gmail.com",
-    imageUrl: first,
-    email: 'contact@example.com',
-  },
-  {
-    id: 5,
-    category: 'Logo',
-    title: 'Branding Project',
-    description: "A vibrant clothing brand that brings boldcolors and stunning designs to life, craftedfor you. At GraFist, fashion meets creativity because style should be as unique as you are.",
-    imageUrl: five,
-    email: 'branding@example.com',
-  },
-  {
-    id: 19,
-    category: 'Logo',
-    title: 'Logo',
-    description: "Explore the projects I've worked on below,demonstrating my skills,WWW.jfsl@gmail.com",
-    imageUrl: seven,
-    email: 'branding@example.com',
-  },
-  {
-    id: 20,
-    category: 'Logo',
-    title: 'Logo',
-    description: "Explore the projects I've worked on below,demonstrating my skills,WWW.jfsl@gmail.com",
-    imageUrl: thirdsec,
-    email: 'branding@example.com',
-  },
-  {
-    id: 2,
-    category: 'UI/UX',
-    title: 'Vista Toure',
-    description: "Explore the projects I've worked on below,demonstrating my skills,WWW.jfsl@gmail.com",
-    imageUrl: sec,
-    email: 'jfs1@gmail.com',
-  },
-  {
-    id: 3,
-    category: 'UI/UX',
-    title: 'Vista Properties',
-    description: "Explore the projects I've worked on below,demonstrating my skills,WWW.jfsl@gmail.com",
-    imageUrl: third,
-    email: 'logo@example.com',
-  },
-  {
-    id: 6,
-    category: 'Logo',
-    title: 'Rolex Brand',
-    description: "Explore the projects I've worked on below,demonstrating my skills,WWW.jfsl@gmail.com",
-    imageUrl: six,
-    email: 'branding@example.com',
-  },
-  {
-    id: 7,
-    category: 'Logo',
-    title: 'Branding Project',
-    description: "Discover a vibrant collection of premium kitchenware and home décor that brings calm, comfort, and elegance to every cooking routine. Utensiluxx turns everyday moments into luxurious experiences with stylish, functional accessories.",
-    imageUrl: sevensec,
-    email: 'branding@example.com',
-  },
-  {
-    id: 8,
-    category: 'Social media',
-    title: 'Branding Project',
-    description: "Branding and marketing assets.",
-    imageUrl: fifteen,
-    email: 'branding@example.com',
-  },
-  {
-    id: 9,
-    category: 'Social media',
-    title: 'Social Media Post',
-    description: "Explore the projects I've worked on below,demonstrating my skills",
-    imageUrl: nine,
-    email: 'socailmediag@example.com',
-  },
-  {
-    id: 10,
-    category: 'Social media',
-    title: 'Trading',
-    description: "Explore the projects I've worked on below,demonstrating my skills",
-    imageUrl: ten,
-    email: 'branding@example.com',
-  },
-  {
-    id: 11,
-    category: 'Social media',
-    title: 'Army',
-    description: "Explore the projects I've worked on below,demonstrating my skills",
-    imageUrl: eleven,
-    email: 'branding@example.com',
-  },
-  {
-    id: 12,
-    category: 'Social media',
-    title: 'Trading',
-    description: "Explore the projects I've worked on below,demonstrating my skills",
-    imageUrl: twelve,
-    email: 'branding@example.com',
-  },
-  {
-    id: 13,
-    category: 'Branding',
-    title: 'Branding',
-    description: "Explore the projects I've worked on below,demonstrating my skills",
-    imageUrl: thirteen,
-    email: 'branding@example.com',
-  },
-  {
-    id: 14,
-    category: 'Branding',
-    title: 'Branding',
-    description: "Explore the projects I've worked on below,demonstrating my skills,",
-    imageUrl: forteen,
-    email: 'branding@example.com',
-  },
-  {
-    id: 15,
-    category: 'Social media',
-    title: 'Bussiness Digital Marketing',
-    description: "Explore the projects I've worked on below,demonstrating my skills,",
-    imageUrl: eight,
-    email: 'branding@example.com',
-  },
-  {
-    id: 16,
-    category: 'Branding',
-    title: 'Book Design',
-    description: "Explore the projects I've worked on below,demonstrating my skills,",
-    imageUrl: sixteen,
-    email: 'branding@example.com',
-  },
-  {
-    id: 17,
-    category: 'Branding',
-    title: 'Branding Project',
-    description: "Explore the projects I've worked on below,demonstrating my skills,",
-    imageUrl: seventeen,
-    email: 'branding@example.com',
-  },
-  
-  // Add more projects as needed
+import React, { useEffect, useState } from "react";
+import "./Portfolio.css";
+import "./Portfolio2.css";
+import { getProjects } from "../../api/projectApi";
+const categories = [
+  "All",
+  "UI/UX",
+  "Logo",
+  "Social media",
+  "Certificates",
 ];
 
-const categories = ['All', 'UI/UX', 'Logo', 'Social media', 'Branding'];
-
 const Portfolio = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
   
-  
+  // Selected project for See More
+  const [selectedProject, setSelectedProject] =
+  useState(null);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        setLoading(true);
+        setError("");
+
+        const data = await getProjects();
+
+        setProjects(data.projects || []);
+      } catch (error) {
+        console.error(
+          "Error fetching projects:",
+          error
+        );
+
+        setError("Projects load nahi ho sake.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   const filteredProjects =
-    activeCategory === 'All'
-      ? projectsData
-      : projectsData.filter((p) => p.category === activeCategory);
+    activeCategory === "All"
+      ? projects
+      : projects.filter(
+          (project) =>
+            project.category === activeCategory
+        );
 
   return (
-    <section className="portfolio-section">
-      <h2 className="portfolio-title">
-         <span className="highlight">My Portfolio</span>
-      </h2>
-      <p className="portfolio-subtitle">
-        Explore the projects I've worked on below, demonstrating my skills,
-        creativity, and dedication to delivering high-quality work:.
-      </p>
+    <>
+      <section className="portfolio-section">
+        <h2 className="portfolio-title">
+          <span className="highlight">
+            My Portfolio
+          </span>
+        </h2>
 
-      <div className="filter-buttons">
-        {categories.map((category) => (
-          <button
-            key={category}
-            className={`filter-btn ${
-              activeCategory === category ? 'active' : ''
-            }`}
-            onClick={() => setActiveCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+        <p className="portfolio-subtitle">
+          Explore the projects I've worked on below,
+          demonstrating my skills, creativity, and
+          dedication to delivering high-quality work.
+        </p>
 
-      <div className="projects-grid">
-        {filteredProjects.map(({ id, title, description, imageUrl, email }) => (
-          <div data-aos="fade-up" data-aos-duration={1000} key={id} className="project-card">
-            <img src={imageUrl} alt={title} className="project-image" />
-            <div className="project-popup">
-              <h3>{title}</h3>
-              <p>{description}</p>
-              <a href={`mailto:${email}`} className="project-email">
-                {email}
-              </a>
-            </div>
+        {/* Categories */}
+        <div className="filter-buttons">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`filter-btn ${
+                activeCategory === category
+                  ? "active"
+                  : ""
+              }`}
+              onClick={() =>
+                setActiveCategory(category)
+              }
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Loading */}
+        {loading && (
+          <div className="portfolio-message">
+            <p>Loading projects...</p>
           </div>
-        ))}
+        )}
+
+        {/* Error */}
+        {!loading && error && (
+          <div className="portfolio-message">
+            <p>{error}</p>
+          </div>
+        )}
+
+        {/* No Projects */}
+        {!loading &&
+          !error &&
+          filteredProjects.length === 0 && (
+            <div className="portfolio-message">
+              <p>
+                No projects found in this category.
+              </p>
+            </div>
+          )}
+
+        {/* Projects */}
+        {!loading &&
+          !error &&
+          filteredProjects.length > 0 && (
+            <div className="projects-grid">
+              {filteredProjects.map((project) => (
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration={1000}
+                  key={project._id}
+                  className="project-card"
+                >
+                  <img
+                    src={project.mainImage}
+                    alt={project.title}
+                    className="project-image"
+                  />
+
+                  <div className="project-popup">
+                    <h3>{project.title}</h3>
+
+                    <p>
+                      {project.description}
+                    </p>
+
+                    <button
+                      type="button"
+                      className="project-see-more"
+                      onClick={() => {
+  setSelectedProject(project);
+  setActiveImageIndex(0);
+}}
+                    >
+                      See More
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+      </section>
+
+      {/* =========================
+          SEE MORE MODAL
+      ========================= */}
+
+      {selectedProject && (() => {
+  const galleryImages = [
+    selectedProject.mainImage,
+    ...(selectedProject.additionalImages || []),
+  ];
+
+  const nextImage = () => {
+    setActiveImageIndex((prev) =>
+      prev === galleryImages.length - 1
+        ? 0
+        : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    setActiveImageIndex((prev) =>
+      prev === 0
+        ? galleryImages.length - 1
+        : prev - 1
+    );
+  };
+
+  return (
+    <div
+      className="portfolio-lightbox"
+      onClick={() => {
+          setSelectedProject(null);
+    setActiveImageIndex(0);
+      }}
+    >
+      <div
+        className="portfolio-lightbox-content"
+        onClick={(e) => e.stopPropagation()}
+      >
+
+        {/* CLOSE */}
+        <button
+          className="lightbox-close"
+          onClick={() => {
+              setSelectedProject(null);
+    setActiveImageIndex(0);
+          }}
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+        {/* TOP INFO */}
+        <div className="lightbox-topbar">
+          <div>
+            <span className="lightbox-category">
+              {selectedProject.category}
+            </span>
+
+            <h2>
+              {selectedProject.title}
+            </h2>
+          </div>
+
+          <div className="lightbox-counter">
+            {activeImageIndex + 1} /{" "}
+            {galleryImages.length}
+          </div>
+        </div>
+
+        {/* MAIN IMAGE AREA */}
+        <div className="lightbox-stage">
+
+          <button
+            className="lightbox-arrow lightbox-prev"
+            onClick={prevImage}
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
+
+          <img
+            key={galleryImages[activeImageIndex]}
+            src={galleryImages[activeImageIndex]}
+            alt={`${selectedProject.title} ${
+              activeImageIndex + 1
+            }`}
+            className="lightbox-main-image"
+          />
+
+          <button
+            className="lightbox-arrow lightbox-next"
+            onClick={nextImage}
+            aria-label="Next image"
+          >
+            ›
+          </button>
+
+        </div>
+
+        {/* DESCRIPTION */}
+        <div className="lightbox-description">
+          <p>
+            {selectedProject.description}
+          </p>
+        </div>
+
+        {/* THUMBNAILS */}
+        {galleryImages.length > 1 && (
+          <div className="lightbox-thumbnails">
+
+            {galleryImages.map((image, index) => (
+              <button
+                key={`${image}-${index}`}
+                className={`lightbox-thumb ${
+                  activeImageIndex === index
+                    ? "active"
+                    : ""
+                }`}
+                onClick={() =>
+                  setActiveImageIndex(index)
+                }
+                aria-label={`Show image ${
+                  index + 1
+                }`}
+              >
+                <img
+                  src={image}
+                  alt=""
+                />
+              </button>
+            ))}
+
+          </div>
+        )}
+
       </div>
-    </section>
+    </div>
+  );
+})()}
+    </>
   );
 };
 

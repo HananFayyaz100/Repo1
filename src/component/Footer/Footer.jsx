@@ -1,11 +1,12 @@
 import React from 'react'
 import './footer.css';
+import first from './firstj.png'
 function Footer() {
   return (
     <div>
       <div className='footer'>
         <div className='first-part'>
-          <img src="src/component/Footer/firstj.png" alt="" />
+          <img src={first} alt="" />
         </div>
         <div className="second-part">
           <span>Service</span>

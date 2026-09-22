@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     padding: 20px;
-    background: black;
+    /* background: black; */
     overflow: hidden;
     min-height: 100vh;
 }
@@ -163,6 +163,12 @@
     letter-spacing: 1px;
     color: white;
 
+}
+.hover2{
+     background: linear-gradient(45deg, rgb(152, 56, 255), rgb(92, 92, 92));
+}
+.hover2:hover{
+       background: linear-gradient(45deg, rgb(123, 0, 255), rgb(92, 92, 92));
 }
 
 @media(max-width: 720px){

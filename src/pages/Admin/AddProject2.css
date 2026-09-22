@@ -1,0 +1,1523 @@
+/* =========================================================
+   ADD PROJECT PAGE
+   FUTURISTIC PURPLE / GLASS DASHBOARD
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.add-project-page {
+  min-height: 100vh;
+  width: 100%;
+
+  padding: 30px 34px 35px;
+
+  color: #ffffff;
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 78% 8%,
+      rgba(126, 54, 255, 0.27),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 8% 85%,
+      rgba(86, 38, 190, 0.22),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #05040d 0%,
+      #0c071b 45%,
+      #070510 100%
+    );
+
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.add-project-page::before {
+  content: "";
+
+  position: fixed;
+
+  width: 650px;
+  height: 650px;
+
+  top: -320px;
+  left: 30%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(133, 62, 255, 0.23),
+      transparent 68%
+    );
+
+  filter: blur(55px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.add-project-page::after {
+  content: "";
+
+  position: fixed;
+
+  width: 600px;
+  height: 600px;
+
+  right: -300px;
+  bottom: -300px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(103, 43, 230, 0.18),
+      transparent 68%
+    );
+
+  filter: blur(60px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.add-project-container {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.add-project-header {
+  min-height: 88px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+
+  padding-bottom: 22px;
+
+  border-bottom:
+    1px solid
+    rgba(190, 130, 255, 0.12);
+}
+
+.page-kicker {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+
+  color:
+    #a56cff;
+}
+
+.add-project-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+
+  line-height: 1.1;
+
+  font-weight: 750;
+
+  letter-spacing: -0.8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 15%,
+      #c18aff 85%
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+.add-project-header p {
+  margin: 8px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color:
+    rgba(255, 255, 255, 0.46);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-dashboard-btn {
+  min-width: 130px;
+  height: 42px;
+
+  padding: 0 17px;
+
+  border-radius: 9px;
+
+  border:
+    1px solid
+    rgba(170, 108, 255, 0.34);
+
+  background:
+    rgba(101, 47, 203, 0.12);
+
+  color:
+    rgba(255, 255, 255, 0.75);
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    0.25s ease;
+}
+
+.back-dashboard-btn:hover {
+  color: #ffffff;
+
+  background:
+    rgba(123, 57, 235, 0.25);
+
+  border-color:
+    rgba(187, 130, 255, 0.65);
+
+  box-shadow:
+    0 0 25px
+    rgba(117, 54, 231, 0.18);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SUCCESS / ERROR
+   ========================================================= */
+
+.form-success,
+.form-error {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 15px 17px;
+
+  margin-bottom: 18px;
+
+  border-radius: 11px;
+
+  backdrop-filter: blur(18px);
+}
+
+.form-success {
+  border:
+    1px solid
+    rgba(80, 220, 160, 0.25);
+
+  background:
+    rgba(30, 120, 85, 0.11);
+}
+
+.form-error {
+  border:
+    1px solid
+    rgba(255, 75, 115, 0.25);
+
+  background:
+    rgba(150, 30, 65, 0.1);
+}
+
+.form-success > span,
+.form-error > span {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-success > span {
+  background:
+    rgba(65, 220, 150, 0.14);
+
+  color: #6ff0b2;
+}
+
+.form-error > span {
+  background:
+    rgba(255, 70, 110, 0.13);
+
+  color: #ff7897;
+}
+
+.form-success strong,
+.form-error strong {
+  display: block;
+
+  font-size: 12px;
+}
+
+.form-success p,
+.form-error p {
+  margin: 4px 0 0;
+
+  font-size: 11px;
+
+  color:
+    rgba(255, 255, 255, 0.47);
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.add-project-container form {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(0, 1.08fr);
+
+  gap: 18px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   GENERIC FORM SECTION
+   ========================================================= */
+
+.form-section {
+  position: relative;
+
+  padding: 22px;
+
+  border-radius: 15px;
+
+  border:
+    1px solid
+    rgba(165, 103, 255, 0.18);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(27, 15, 57, 0.78),
+      rgba(10, 7, 23, 0.86)
+    );
+
+  box-shadow:
+    0 18px 45px
+    rgba(0, 0, 0, 0.22),
+
+    inset 0 1px 0
+    rgba(255, 255, 255, 0.025);
+
+  backdrop-filter: blur(22px);
+
+  overflow: hidden;
+}
+
+.form-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(173, 105, 255, 0.7),
+      transparent
+    );
+
+  opacity: 0.6;
+}
+
+.form-section:hover {
+  border-color:
+    rgba(173, 112, 255, 0.28);
+}
+
+
+/* =========================================================
+   SECTION ORDER / LAYOUT
+   ========================================================= */
+
+/*
+   Desktop layout:
+
+   LEFT  = Main Image
+   RIGHT = Project Information
+   LEFT  = Additional Images
+   RIGHT = remaining space / balanced layout
+*/
+
+.add-project-container form .form-section:nth-child(1) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.add-project-container form .form-section:nth-child(2) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.add-project-container form .form-section:nth-child(3) {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.form-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 21px;
+}
+
+.form-section-heading > div:first-child {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+.form-section-heading > div:first-child > span {
+  min-width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(136, 67, 255, 0.3),
+      rgba(87, 37, 174, 0.13)
+    );
+
+  border:
+    1px solid
+    rgba(169, 106, 255, 0.25);
+
+  color: #bd8bff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.form-section-heading h2 {
+  margin: 0;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.2px;
+}
+
+.form-section-heading p {
+  margin: 4px 0 0;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+}
+
+
+/* =========================================================
+   IMAGE COUNT
+   ========================================================= */
+
+.image-count {
+  min-width: 42px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background:
+    rgba(130, 61, 246, 0.12);
+
+  border:
+    1px solid
+    rgba(161, 98, 255, 0.2);
+
+  color: #b988ff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   FORM FIELD
+   ========================================================= */
+
+.form-field {
+  width: 100%;
+
+  margin-bottom: 17px;
+}
+
+.form-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+
+  border:
+    1px solid
+    rgba(170, 109, 255, 0.23);
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background:
+    rgba(4, 3, 14, 0.55);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  transition:
+    0.22s ease;
+
+  box-shadow:
+    inset 0 1px 8px
+    rgba(0, 0, 0, 0.12);
+}
+
+.form-field input,
+.form-field select {
+  height: 42px;
+
+  padding: 0 13px;
+}
+
+.form-field textarea {
+  min-height: 135px;
+
+  padding: 13px;
+
+  resize: vertical;
+
+  line-height: 1.55;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color:
+    rgba(255, 255, 255, 0.25);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color:
+    rgba(178, 116, 255, 0.72);
+
+  background:
+    rgba(20, 10, 42, 0.72);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(126, 55, 238, 0.08),
+
+    0 0 25px
+    rgba(107, 45, 219, 0.12);
+}
+
+.form-field select {
+  cursor: pointer;
+}
+
+.form-field select option {
+  background: #171027;
+
+  color: #ffffff;
+}
+
+.field-hint {
+  display: block;
+
+  margin-top: 6px;
+
+  font-size: 9px;
+
+  color:
+    rgba(255, 255, 255, 0.27);
+}
+
+
+/* =========================================================
+   MAIN UPLOAD AREA
+   ========================================================= */
+
+.main-upload-area {
+  width: 100%;
+}
+
+
+/* =========================================================
+   MAIN UPLOAD BOX
+   ========================================================= */
+
+.main-upload-box {
+  width: 100%;
+
+  min-height: 265px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding: 25px;
+
+  text-align: center;
+
+  border:
+    1px dashed
+    rgba(174, 112, 255, 0.48);
+
+  border-radius: 12px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(121, 55, 235, 0.1),
+      transparent 60%
+    ),
+
+    rgba(4, 3, 14, 0.45);
+
+  cursor: pointer;
+
+  transition:
+    0.25s ease;
+}
+
+.main-upload-box:hover {
+  border-color:
+    rgba(192, 138, 255, 0.8);
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(130, 60, 250, 0.16),
+      transparent 62%
+    ),
+
+    rgba(10, 5, 24, 0.6);
+
+  box-shadow:
+    0 0 35px
+    rgba(112, 47, 224, 0.1);
+}
+
+.main-upload-box input,
+.gallery-upload-box input,
+.change-image-btn input {
+  display: none;
+}
+
+
+/* =========================================================
+   UPLOAD ICON
+   ========================================================= */
+
+.upload-icon {
+  width: 53px;
+  height: 53px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139, 66, 255, 0.28),
+      rgba(87, 36, 182, 0.12)
+    );
+
+  border:
+    1px solid
+    rgba(180, 119, 255, 0.27);
+
+  color: #bd8aff;
+
+  font-size: 25px;
+
+  box-shadow:
+    0 0 25px
+    rgba(111, 48, 220, 0.12);
+}
+
+.main-upload-box strong {
+  font-size: 13px;
+
+  font-weight: 650;
+}
+
+.main-upload-box span {
+  margin-top: 7px;
+
+  font-size: 10px;
+
+  color:
+    rgba(255, 255, 255, 0.4);
+}
+
+.main-upload-box small {
+  margin-top: 7px;
+
+  font-size: 9px;
+
+  color:
+    rgba(255, 255, 255, 0.24);
+}
+
+
+/* =========================================================
+   MAIN IMAGE PREVIEW
+   ========================================================= */
+
+.main-preview {
+  width: 100%;
+
+  min-height: 265px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  border:
+    1px solid
+    rgba(171, 108, 255, 0.3);
+
+  background: #080611;
+}
+
+.main-preview img {
+  width: 100%;
+  height: 265px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.preview-overlay {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 16px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(4, 3, 12, 0.92)
+    );
+}
+
+.preview-overlay strong {
+  display: block;
+
+  max-width: 250px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  font-size: 11px;
+}
+
+.preview-overlay span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 9px;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+}
+
+
+/* =========================================================
+   CHANGE IMAGE
+   ========================================================= */
+
+.change-image-btn {
+  flex-shrink: 0;
+
+  padding: 8px 12px;
+
+  border-radius: 7px;
+
+  border:
+    1px solid
+    rgba(177, 111, 255, 0.4);
+
+  background:
+    rgba(101, 44, 206, 0.2);
+
+  color: #c193ff;
+
+  font-size: 9px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.change-image-btn:hover {
+  background:
+    rgba(124, 56, 238, 0.34);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   ADDITIONAL IMAGE PREVIEW GRID
+   ========================================================= */
+
+.additional-preview-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 10px;
+
+  margin-bottom: 13px;
+}
+
+.additional-preview {
+  height: 105px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  border:
+    1px solid
+    rgba(164, 102, 255, 0.23);
+
+  background:
+    rgba(7, 5, 17, 0.8);
+}
+
+.additional-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: 0.25s ease;
+}
+
+.additional-preview:hover img {
+  transform: scale(1.06);
+}
+
+.additional-preview::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 45%,
+      rgba(0, 0, 0, 0.4)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE NUMBER
+   ========================================================= */
+
+.image-number {
+  position: absolute;
+
+  top: 7px;
+  left: 7px;
+
+  z-index: 4;
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background:
+    rgba(17, 8, 39, 0.8);
+
+  border:
+    1px solid
+    rgba(189, 131, 255, 0.3);
+
+  color: #d0a9ff;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   REMOVE IMAGE
+   ========================================================= */
+
+.remove-image-btn {
+  position: absolute;
+
+  top: 7px;
+  right: 7px;
+
+  z-index: 5;
+
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background:
+    rgba(9, 4, 18, 0.8);
+
+  color:
+    rgba(255, 255, 255, 0.75);
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.remove-image-btn:hover {
+  background:
+    rgba(220, 40, 80, 0.8);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   GALLERY UPLOAD BOX
+   ========================================================= */
+
+.gallery-upload-box {
+  min-height: 115px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  border:
+    1px dashed
+    rgba(165, 103, 255, 0.35);
+
+  border-radius: 10px;
+
+  background:
+    rgba(7, 4, 18, 0.35);
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.gallery-upload-box:hover {
+  border-color:
+    rgba(190, 135, 255, 0.68);
+
+  background:
+    rgba(100, 44, 205, 0.08);
+}
+
+.gallery-upload-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 8px;
+
+  border-radius: 9px;
+
+  background:
+    rgba(131, 60, 246, 0.13);
+
+  border:
+    1px solid
+    rgba(166, 103, 255, 0.22);
+
+  color: #b984ff;
+
+  font-size: 20px;
+}
+
+.gallery-upload-box strong {
+  font-size: 11px;
+}
+
+.gallery-upload-box > span:last-child {
+  margin-top: 5px;
+
+  font-size: 9px;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================================================
+   MAX IMAGES MESSAGE
+   ========================================================= */
+
+.max-images-message {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  border:
+    1px solid
+    rgba(77, 215, 150, 0.18);
+
+  background:
+    rgba(45, 170, 112, 0.06);
+
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-size: 9px;
+}
+
+.max-images-message span {
+  color: #64e7a6;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   SUBMIT AREA
+   ========================================================= */
+
+.form-submit-area {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 2px;
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+   ========================================================= */
+
+.cancel-project-btn {
+  height: 42px;
+
+  padding: 0 20px;
+
+  border-radius: 8px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.cancel-project-btn:hover {
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================================
+   CREATE BUTTON
+   ========================================================= */
+
+.create-project-submit {
+  min-width: 155px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #984cff,
+      #6825ce
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 25px
+    rgba(109, 42, 220, 0.28);
+
+  transition:
+    0.25s ease;
+}
+
+.create-project-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #a65cff,
+      #7532dc
+    );
+
+  box-shadow:
+    0 12px 30px
+    rgba(117, 45, 232, 0.4);
+}
+
+.create-project-submit span {
+  font-size: 15px;
+}
+
+.create-project-submit:disabled,
+.cancel-project-btn:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   SUBMIT SPINNER
+   ========================================================= */
+
+.submit-spinner {
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+
+  border:
+    2px solid
+    rgba(255, 255, 255, 0.3);
+
+  border-top-color: #ffffff;
+
+  animation:
+    addProjectSpin 0.7s linear infinite;
+}
+
+@keyframes addProjectSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1500px) {
+
+  .add-project-page {
+    padding: 38px 48px 40px;
+  }
+
+  .add-project-header h1 {
+    font-size: 34px;
+  }
+
+  .form-section {
+    padding: 26px;
+  }
+
+  .main-upload-box,
+  .main-preview,
+  .main-preview img {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  .form-section-heading h2 {
+    font-size: 19px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .add-project-page {
+    padding: 25px 22px 30px;
+  }
+
+  .add-project-container form {
+    grid-template-columns: 1fr;
+  }
+
+  .add-project-container form .form-section:nth-child(1),
+  .add-project-container form .form-section:nth-child(2),
+  .add-project-container form .form-section:nth-child(3) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .additional-preview-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+  .add-project-page {
+    padding: 20px 15px 25px;
+  }
+
+  .add-project-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .add-project-header h1 {
+    font-size: 27px;
+  }
+
+  .back-dashboard-btn {
+    width: 100%;
+  }
+
+  .form-section {
+    padding: 18px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .additional-preview-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .form-submit-area {
+    justify-content: stretch;
+  }
+
+  .cancel-project-btn,
+  .create-project-submit {
+    flex: 1;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .add-project-page {
+    padding: 15px 10px 22px;
+  }
+
+  .add-project-header {
+    margin-bottom: 18px;
+
+    padding-bottom: 18px;
+  }
+
+  .page-kicker {
+    font-size: 8px;
+  }
+
+  .add-project-header h1 {
+    font-size: 23px;
+  }
+
+  .add-project-header p {
+    font-size: 11px;
+  }
+
+  .form-section {
+    padding: 15px;
+
+    border-radius: 12px;
+  }
+
+  .form-section-heading h2 {
+    font-size: 15px;
+  }
+
+  .form-section-heading p {
+    font-size: 9px;
+  }
+
+  .main-upload-box,
+  .main-preview {
+    min-height: 220px;
+  }
+
+  .main-preview img {
+    height: 220px;
+  }
+
+  .preview-overlay {
+    padding: 12px;
+  }
+
+  .preview-overlay strong {
+    max-width: 150px;
+  }
+
+  .additional-preview-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+  .additional-preview {
+    height: 95px;
+  }
+
+  .form-submit-area {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-project-btn,
+  .create-project-submit {
+    width: 100%;
+
+    flex: none;
+  }
+
+}

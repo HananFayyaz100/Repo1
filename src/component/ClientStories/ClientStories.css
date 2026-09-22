@@ -10,7 +10,7 @@
 
 .client-stories-section {
   display: flex;
-  background: var(--primary-bg);
+  /* background: var(--primary-bg); */
   width: 100%;
   min-height: 420px;
   justify-content: center;
@@ -259,5 +259,8 @@
     padding: 16px 12px;
     height: auto;
   }
+}
+@media(max-width: 450px){
+  .spot_line{display: none;}
 }
 

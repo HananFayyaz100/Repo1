@@ -103,7 +103,7 @@ function Contact() {
         required
         minLength={10}
       ></textarea>
-      <button className="submit" type="submit">
+      <button className="submit hover2" type="submit">
         Submit
       </button>
     </form>

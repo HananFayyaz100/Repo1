@@ -5,6 +5,7 @@ import icon from './firstj.png'
 import { Link, Element } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 function Home2() {
     const [open, setOpen] = useState(false);
     const toggleMenu = () => {
@@ -18,15 +19,25 @@ function Home2() {
                 <div className='navbar'>
                     <div className='navimgbox'>
                         <img src={icon} alt="" />
-                        <span>Hananali0324king@gmail.com</span>
+                        <span>0324king@gmail.com</span>
                     </div>
                     <div className={`rightnav ${open ? "on" : ""}`}>
                         <span> <Link to='service' smooth={true} duration={300}>Services</Link></span>
                         <span><Link to='port' smooth={true} duration={500}>Portfolio</Link></span>
                         <span><Link to='skill' smooth={true} duration={600}>Skills</Link></span>
                         <span><Link to='contact' smooth={true} duration={700}>Contact</Link></span>
-                        <span><Link to='resume' smooth={true} duration={800}>Resume</Link></span>
-                        <button className='navbuttona btncontact'><Link to='contact' smooth={true} duration={700}>Contact Now</Link></button>
+                        <span>
+                            <Link 
+                                className='alicvtop' 
+                                href='cv.pdf' 
+                                smooth={true} 
+                                duration={800}
+                                style={{ textDecoration: 'none', color: 'inherit' }}
+                            >
+                                Resume
+                            </Link>
+                            </span>
+                        <button className='navbuttona btncontact'><Link to='contact' smoot  h={true} duration={700}>Contact Now</Link></button>
                     </div>
                     <div className='burger' onClick={toggleMenu}>&#9776;</div>
                 </div>
@@ -51,6 +62,8 @@ function Home2() {
                             <button>   <a href="https://www.facebook.com/@ali.fayyaz. 163891"   target="_blank" rel="noopener noreferrer"><FontAwesomeIcon color='white' icon={faFacebook} size={20} /></a></button>
                             <button><a href="https://www.instagram.com/myusername"   target="_blank" rel="noopener noreferrer"><FontAwesomeIcon color="white" icon={faInstagram} size='5px' /></a></button>
                             <button><a href="https://wa.me/923246233787?text=Hello%2C%20I%20want%20to%20know%20more%20about%20your%20services!"   target="_blank" rel="noopener noreferrer"><FontAwesomeIcon color="white" icon={faWhatsapp} size='10px' /></a></button>
+                            
+                            <button> <a href="/cv.pdf" download> <FontAwesomeIcon color="white" icon={faDownload} /> Download CV </a> </button>
                         </div>
                     </div>
                     <div className='right-hero-img'>
