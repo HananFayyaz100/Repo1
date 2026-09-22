@@ -1,6 +1,6 @@
 .outer-ser{
     height: 100vh;
-    background: black;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,5 +102,12 @@
     }
     .secser{
         font-size: 0.8rem;
+    }
+    .one{
+        display: flex;
+        flex-direction: column;
+    }
+    .one:nth-child(4){
+        display: none;
     }
 }

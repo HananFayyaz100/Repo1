@@ -22,6 +22,7 @@
 .second-part{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
     
@@ -59,6 +60,11 @@
     .second-part span{
         font-size: 0.7rem;
         gap: 10px;
+        flex-wrap: wrap;
+    }
+    .first-part{
+        width: 20px;
+        height: 20px;
     }
     .footer{
         padding-bottom: 20px;

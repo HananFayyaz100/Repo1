@@ -3,13 +3,13 @@
     display: flex;
     align-items: center;
     height: 100vh;
-    background: rgb(15, 7, 21);
+    /* background: rgb(15, 7, 21); */
 
 }
 .inner_skill{
     width: 100%;
     margin: auto 0px;
-    background: rgb(15, 7, 21);
+    /* background: rgb(15, 7, 21); */
 }
 .first_part{
     text-align: center;
