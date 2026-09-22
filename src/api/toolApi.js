@@ -5,7 +5,7 @@ import axios from "axios";
 // aur neeche ki API_URL line hata dein — pattern reviewApi.js jaisa
 // hi rakha gaya hai taake dono APIs consistent rahen.
 const API_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+  import.meta.env.VITE_API_URL || "https://aliiwebbackend1.vercel.app/";
 
 // Backend ka root origin (API_URL se "/api" hata kar) — tool image
 // Cloudinary se aati hai (poora secure_url), lekin agar kabhi koi

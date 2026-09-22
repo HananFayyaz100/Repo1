@@ -3,7 +3,7 @@ import axios from "axios";
 // Agar aapki projectApi.js mein pehle se koi axios instance / BASE_URL bana hua hai,
 // to yahan usi ko import kar lein aur neeche ki API_URL line hata dein.
 const API_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+  import.meta.env.VITE_API_URL || "https://aliiwebbackend1.vercel.app/";
 
 // Backend ka root origin (API_URL se "/api" hata kar) — images
 // ke liye chahiye kyunki backend unhe relative path bhejta hai
